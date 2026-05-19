@@ -794,9 +794,6 @@
   .mt-1 {
     margin-top: calc(var(--spacing) * 1);
   }
-  .mt-1\.5 {
-    margin-top: calc(var(--spacing) * 1.5);
-  }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
   }
@@ -1100,11 +1097,6 @@
   .group-first\:block {
     &:is(:where(.group):first-child *) {
       display: block;
-    }
-  }
-  .group-first\:pt-4 {
-    &:is(:where(.group):first-child *) {
-      padding-top: calc(var(--spacing) * 4);
     }
   }
   .hover\:bg-Blue-200 {

@@ -794,9 +794,6 @@
   .mt-1 {
     margin-top: calc(var(--spacing) * 1);
   }
-  .mt-1\.5 {
-    margin-top: calc(var(--spacing) * 1.5);
-  }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
   }
@@ -837,6 +834,9 @@
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
+  .h-7 {
+    height: calc(var(--spacing) * 7);
+  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
@@ -851,6 +851,9 @@
   }
   .w-6 {
     width: calc(var(--spacing) * 6);
+  }
+  .w-7 {
+    width: calc(var(--spacing) * 7);
   }
   .w-10 {
     width: calc(var(--spacing) * 10);
@@ -920,9 +923,6 @@
   .overflow-hidden {
     overflow: hidden;
   }
-  .overflow-visible {
-    overflow: visible;
-  }
   .scroll-smooth {
     scroll-behavior: smooth;
   }
@@ -985,8 +985,17 @@
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
   }
+  .pt-2 {
+    padding-top: calc(var(--spacing) * 2);
+  }
   .pt-2\.5 {
     padding-top: calc(var(--spacing) * 2.5);
+  }
+  .pt-4 {
+    padding-top: calc(var(--spacing) * 4);
+  }
+  .pt-5 {
+    padding-top: calc(var(--spacing) * 5);
   }
   .pb-16 {
     padding-bottom: calc(var(--spacing) * 16);
@@ -1102,11 +1111,6 @@
       display: block;
     }
   }
-  .group-first\:pt-4 {
-    &:is(:where(.group):first-child *) {
-      padding-top: calc(var(--spacing) * 4);
-    }
-  }
   .hover\:bg-Blue-200 {
     &:hover {
       @media (hover: hover) {
@@ -1137,11 +1141,6 @@
       border-radius: calc(infinity * 1px);
     }
   }
-  .sm\:rounded-bl-full {
-    @media (width >= 40rem) {
-      border-bottom-left-radius: calc(infinity * 1px);
-    }
-  }
   .sm\:object-scale-down {
     @media (width >= 40rem) {
       object-fit: scale-down;
@@ -1162,12 +1161,6 @@
   .md\:mb-0 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 0);
-    }
-  }
-  .md\:size-7 {
-    @media (width >= 48rem) {
-      width: calc(var(--spacing) * 7);
-      height: calc(var(--spacing) * 7);
     }
   }
   .md\:h-full {
@@ -1203,11 +1196,6 @@
   .md\:rounded-4xl {
     @media (width >= 48rem) {
       border-radius: var(--radius-4xl);
-    }
-  }
-  .md\:rounded-bl-none {
-    @media (width >= 48rem) {
-      border-bottom-left-radius: 0;
     }
   }
   .md\:object-cover {

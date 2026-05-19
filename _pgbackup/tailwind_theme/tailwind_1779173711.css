@@ -791,11 +791,11 @@
   .-mt-0\.5 {
     margin-top: calc(var(--spacing) * -0.5);
   }
+  .-mt-4 {
+    margin-top: calc(var(--spacing) * -4);
+  }
   .mt-1 {
     margin-top: calc(var(--spacing) * 1);
-  }
-  .mt-1\.5 {
-    margin-top: calc(var(--spacing) * 1.5);
   }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
@@ -837,6 +837,9 @@
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
+  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
@@ -851,6 +854,9 @@
   }
   .w-6 {
     width: calc(var(--spacing) * 6);
+  }
+  .w-8 {
+    width: calc(var(--spacing) * 8);
   }
   .w-10 {
     width: calc(var(--spacing) * 10);
@@ -1100,11 +1106,6 @@
   .group-first\:block {
     &:is(:where(.group):first-child *) {
       display: block;
-    }
-  }
-  .group-first\:pt-4 {
-    &:is(:where(.group):first-child *) {
-      padding-top: calc(var(--spacing) * 4);
     }
   }
   .hover\:bg-Blue-200 {
