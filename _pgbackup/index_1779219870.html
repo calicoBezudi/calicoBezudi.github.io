@@ -57,7 +57,7 @@ Hi! I&apos;m Calico. Game Development is very close to my heart. The challenge o
             </div>             
         </div>         
         <div class="container max-w-auto mx-auto px-6 transition-all" id="Projects">
-            <div class="flex group items-stretch transition-all" data-pgc-define="TimelineComponent" data-pgc-define-name="Timeline">
+            <div class="flex group items-stretch" data-pgc-define="TimelineComponent" data-pgc-define-name="Timeline">
                 <div class="flex justify-center relative shrink-0 w-12">
                     <svg class="absolute h-[calc(100%+2px)] inset-0 w-full group-first:pt-4" xmlns="http://www.w3.org/2000/svg">
                         <line x1="50%" y1="0" x2="50%" y2="100%" stroke="#8caaee" stroke-width="10"></line>
@@ -69,10 +69,29 @@ Hi! I&apos;m Calico. Game Development is very close to my heart. The challenge o
                     <p class="font-semibold mb-4 mt-1 text-2xl text-Surface-surface0 text-ctp-subtext1" data-pgc-edit="Date">
                 January 2026 - May 2026 </p>
                     <div class="flex flex-col lg:flex-row gap-6 items-start">
-                        <div class="w-full lg:w-7/12 aspect-video bg-ctp-surface0 rounded-sm overflow-hidden shadow-md shrink-0">
-                            <img alt="Garden of Idan Gameplay" class="block h-full object-cover w-full" src="./Assets/GardenOfIdanStudy.png" data-pgc-edit="Thumbnail[src, no_content]">
-                            <div class="w-full h-full flex items-center justify-center text-xs font-mono text-ctp-overlay0 uppercase tracking-widest">16:9 Gameplay Image</div>
+                        <!--Thumbnail-->
+                        <!-- 1. The Thumbnail Container -->
+                        <div class="w-full lg:w-7/12 aspect-video bg-ctp-surface0 rounded-sm overflow-hidden shadow-md shrink-0 relative" style="--img: url('./Assets/GardenOfIdanStudy.png');"> 
+                            <!-- 👈 SET YOUR IMAGE PATH HERE ONCE -->
+                            <!-- Anchor is tightly bound to an inline-block; hover actions are completely isolated here -->
+                            <a href="#enlarged-[ID-TOKEN]" class="relative block w-full h-full group cursor-zoom-in">  <!-- Thumbnail Image (Pulls from the parent CSS variable) --> <div class="w-full h-full bg-[image:var(--img)] bg-cover bg-center transition duration-300 group-hover:scale-[1.015]" aria-label="[IMAGE-ALT-TEXT]" data-pgc-edit="Thumbnail[src, no_content]" src="./Assets/GardenOfIdanStudy.png"></div>  <!-- Hover Mask: Only triggers when explicitly hovering over this anchor block --> <div class="absolute inset-0 bg-black/30 opacity-0 transition duration-200 group-hover:opacity-100 flex items-center justify-center pointer-events-none">
+                                    <span class="text-white text-xs font-mono tracking-widest bg-black/60 px-3 py-1.5 rounded-sm uppercase backdrop-blur-sm">Click to enlarge</span>
+                                </div> </a>
+                        </div>
+                        <!-- 2. The Full-Screen Native Component Modal -->
+                        <div id="enlarged-[ID-TOKEN]" class="fixed inset-0 z-50 hidden target:flex bg-black/95 backdrop-blur-md items-center justify-center p-2 sm:p-4 md:p-6">
+                            <!-- Tap Anywhere Backing Layer to Close -->
+                            <a href="#" class="absolute inset-0 z-0 cursor-zoom-out" aria-label="Close preview"></a>
+                            <!-- Top-Left Floating Close Action Icon -->
+                            <a href="#" class="absolute top-4 left-4 z-20 text-white/60 hover:text-white p-2 transition-colors bg-black/40 hover:bg-black/80 rounded-sm" aria-label="Close preview"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                                </svg> </a>
+                            <!-- Expanded Display Engine (Pulls from the same CSS variable automatically) -->
+                            <div class="relative z-10 w-full max-w-[95vw] aspect-video bg-ctp-surface0 rounded-sm overflow-hidden shadow-2xl pointer-events-none">
+                                <div class="w-full h-full bg-[image:var(--img)] bg-cover bg-center"></div>
+                            </div>
                         </div>                         
+                        <!--EndOfThumbnail-->                         
                         <div class="flex-1 flex flex-col justify-between">
                             <p class="font-medium font-sans leading-relaxed text-Surface-surface0 text-ctp-text text-lg" data-pgc-edit="Description">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate. </p>
@@ -94,10 +113,29 @@ Hi! I&apos;m Calico. Game Development is very close to my heart. The challenge o
                     <h3 class="font-semibold text-3xl text-Surface-surface0 text-ctp-text tracking-wide" data-pgc-field="Title and Role"><b>Massaquerade</b> - Systems Design</h3>
                     <p class="font-semibold mb-4 mt-1 text-2xl text-Surface-surface0 text-ctp-subtext1" data-pgc-field="Date">Global Game Jam 2026</p>
                     <div class="flex flex-col lg:flex-row gap-6 items-start">
-                        <div class="w-full lg:w-7/12 aspect-video bg-ctp-surface0 rounded-sm overflow-hidden shadow-md shrink-0">
-                            <img alt="Garden of Idan Gameplay" class="block h-full object-cover w-full" src="./Assets/MassaqueradeGGJThumbnail.png" data-pgc-field="Thumbnail">
-                            <div class="w-full h-full flex items-center justify-center text-xs font-mono text-ctp-overlay0 uppercase tracking-widest">16:9 Gameplay Image</div>
+                        <!--Thumbnail-->
+                        <!-- 1. The Thumbnail Container -->
+                        <div class="w-full lg:w-7/12 aspect-video bg-ctp-surface0 rounded-sm overflow-hidden shadow-md shrink-0 relative" style="--img: url('./Assets/GardenOfIdanStudy.png');"> 
+                            <!-- 👈 SET YOUR IMAGE PATH HERE ONCE -->
+                            <!-- Anchor is tightly bound to an inline-block; hover actions are completely isolated here -->
+                            <a href="#enlarged-[ID-TOKEN]" class="relative block w-full h-full group cursor-zoom-in"> <!-- Thumbnail Image (Pulls from the parent CSS variable) --> <div class="w-full h-full bg-[image:var(--img)] bg-cover bg-center transition duration-300 group-hover:scale-[1.015]" aria-label="[IMAGE-ALT-TEXT]" src="./Assets/MassaqueradeGGJThumbnail.png" data-pgc-field="Thumbnail"></div> <!-- Hover Mask: Only triggers when explicitly hovering over this anchor block --> <div class="absolute inset-0 bg-black/30 opacity-0 transition duration-200 group-hover:opacity-100 flex items-center justify-center pointer-events-none">
+                                    <span class="text-white text-xs font-mono tracking-widest bg-black/60 px-3 py-1.5 rounded-sm uppercase backdrop-blur-sm">Click to enlarge</span>
+                                </div> </a>
+                        </div>
+                        <!-- 2. The Full-Screen Native Component Modal -->
+                        <div id="enlarged-[ID-TOKEN]" class="fixed inset-0 z-50 hidden target:flex bg-black/95 backdrop-blur-md items-center justify-center p-2 sm:p-4 md:p-6">
+                            <!-- Tap Anywhere Backing Layer to Close -->
+                            <a href="#" class="absolute inset-0 z-0 cursor-zoom-out" aria-label="Close preview"></a>
+                            <!-- Top-Left Floating Close Action Icon -->
+                            <a href="#" class="absolute top-4 left-4 z-20 text-white/60 hover:text-white p-2 transition-colors bg-black/40 hover:bg-black/80 rounded-sm" aria-label="Close preview"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                                </svg> </a>
+                            <!-- Expanded Display Engine (Pulls from the same CSS variable automatically) -->
+                            <div class="relative z-10 w-full max-w-[95vw] aspect-video bg-ctp-surface0 rounded-sm overflow-hidden shadow-2xl pointer-events-none">
+                                <div class="w-full h-full bg-[image:var(--img)] bg-cover bg-center"></div>
+                            </div>
                         </div>                         
+                        <!--EndOfThumbnail-->                         
                         <div class="flex-1 flex flex-col justify-between">
                             <p class="font-medium font-sans leading-relaxed text-Surface-surface0 text-ctp-text text-lg" data-pgc-field="Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
                             <button type="button" class="bg-Blue-500 cursor-pointer font-bold font-sans hover:bg-Blue-200 mt-6 px-6 py-1 rounded-full self-start shadow-sm text-2xl text-white tracking-wide transition-opacity">
@@ -118,10 +156,29 @@ Hi! I&apos;m Calico. Game Development is very close to my heart. The challenge o
                     <h3 class="font-semibold text-3xl text-Surface-surface0 text-ctp-text tracking-wide" data-pgc-field="Title and Role"><b>Cold Fusion</b> - Solo Project</h3>
                     <p class="font-semibold mb-4 mt-1 text-2xl text-Surface-surface0 text-ctp-subtext1" data-pgc-field="Date">March 2025 - May 2025</p>
                     <div class="flex flex-col lg:flex-row gap-6 items-start">
-                        <div class="w-full lg:w-7/12 aspect-video bg-ctp-surface0 rounded-sm overflow-hidden shadow-md shrink-0">
-                            <img alt="Garden of Idan Gameplay" class="block h-full object-cover w-full" src="./Assets/ColdFusionGameplayPhoto.png" data-pgc-field="Thumbnail">
-                            <div class="w-full h-full flex items-center justify-center text-xs font-mono text-ctp-overlay0 uppercase tracking-widest">16:9 Gameplay Image</div>
+                        <!--Thumbnail-->
+                        <!-- 1. The Thumbnail Container -->
+                        <div class="w-full lg:w-7/12 aspect-video bg-ctp-surface0 rounded-sm overflow-hidden shadow-md shrink-0 relative" style="--img: url('./Assets/GardenOfIdanStudy.png');"> 
+                            <!-- 👈 SET YOUR IMAGE PATH HERE ONCE -->
+                            <!-- Anchor is tightly bound to an inline-block; hover actions are completely isolated here -->
+                            <a href="#enlarged-[ID-TOKEN]" class="relative block w-full h-full group cursor-zoom-in"> <!-- Thumbnail Image (Pulls from the parent CSS variable) --> <div class="w-full h-full bg-[image:var(--img)] bg-cover bg-center transition duration-300 group-hover:scale-[1.015]" aria-label="[IMAGE-ALT-TEXT]" src="./Assets/ColdFusionGameplayPhoto.png" data-pgc-field="Thumbnail"></div> <!-- Hover Mask: Only triggers when explicitly hovering over this anchor block --> <div class="absolute inset-0 bg-black/30 opacity-0 transition duration-200 group-hover:opacity-100 flex items-center justify-center pointer-events-none">
+                                    <span class="text-white text-xs font-mono tracking-widest bg-black/60 px-3 py-1.5 rounded-sm uppercase backdrop-blur-sm">Click to enlarge</span>
+                                </div> </a>
+                        </div>
+                        <!-- 2. The Full-Screen Native Component Modal -->
+                        <div id="enlarged-[ID-TOKEN]" class="fixed inset-0 z-50 hidden target:flex bg-black/95 backdrop-blur-md items-center justify-center p-2 sm:p-4 md:p-6">
+                            <!-- Tap Anywhere Backing Layer to Close -->
+                            <a href="#" class="absolute inset-0 z-0 cursor-zoom-out" aria-label="Close preview"></a>
+                            <!-- Top-Left Floating Close Action Icon -->
+                            <a href="#" class="absolute top-4 left-4 z-20 text-white/60 hover:text-white p-2 transition-colors bg-black/40 hover:bg-black/80 rounded-sm" aria-label="Close preview"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                                </svg> </a>
+                            <!-- Expanded Display Engine (Pulls from the same CSS variable automatically) -->
+                            <div class="relative z-10 w-full max-w-[95vw] aspect-video bg-ctp-surface0 rounded-sm overflow-hidden shadow-2xl pointer-events-none">
+                                <div class="w-full h-full bg-[image:var(--img)] bg-cover bg-center"></div>
+                            </div>
                         </div>                         
+                        <!--EndOfThumbnail-->                         
                         <div class="flex-1 flex flex-col justify-between">
                             <p class="font-medium font-sans leading-relaxed text-Surface-surface0 text-ctp-text text-lg" data-pgc-field="Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
                             <button type="button" class="bg-Blue-500 cursor-pointer font-bold font-sans hover:bg-Blue-200 mt-6 px-6 py-1 rounded-full self-start shadow-sm text-2xl text-white tracking-wide transition-opacity">
@@ -142,10 +199,29 @@ Hi! I&apos;m Calico. Game Development is very close to my heart. The challenge o
                     <h3 class="font-semibold text-3xl text-Surface-surface0 text-ctp-text tracking-wide" data-pgc-field="Title and Role"><b>Overgrown!</b> - Systems Design and UI Implementation</h3>
                     <p class="font-semibold mb-4 mt-1 text-2xl text-Surface-surface0 text-ctp-subtext1" data-pgc-field="Date">Fall 2024 - Winter 2025</p>
                     <div class="flex flex-col lg:flex-row gap-6 items-start">
-                        <div class="w-full lg:w-7/12 aspect-video bg-ctp-surface0 rounded-sm overflow-hidden shadow-md shrink-0">
-                            <img alt="Garden of Idan Gameplay" class="block h-full object-cover w-full" src="./Assets/OvergrownHeader_WithLogo.png" data-pgc-field="Thumbnail">
-                            <div class="w-full h-full flex items-center justify-center text-xs font-mono text-ctp-overlay0 uppercase tracking-widest">16:9 Gameplay Image</div>
+                        <!--Thumbnail-->
+                        <!-- 1. The Thumbnail Container -->
+                        <div class="w-full lg:w-7/12 aspect-video bg-ctp-surface0 rounded-sm overflow-hidden shadow-md shrink-0 relative" style="--img: url('./Assets/GardenOfIdanStudy.png');"> 
+                            <!-- 👈 SET YOUR IMAGE PATH HERE ONCE -->
+                            <!-- Anchor is tightly bound to an inline-block; hover actions are completely isolated here -->
+                            <a href="#enlarged-[ID-TOKEN]" class="relative block w-full h-full group cursor-zoom-in"> <!-- Thumbnail Image (Pulls from the parent CSS variable) --> <div class="w-full h-full bg-[image:var(--img)] bg-cover bg-center transition duration-300 group-hover:scale-[1.015]" aria-label="[IMAGE-ALT-TEXT]" src="./Assets/OvergrownHeader_WithLogo.png" data-pgc-field="Thumbnail"></div> <!-- Hover Mask: Only triggers when explicitly hovering over this anchor block --> <div class="absolute inset-0 bg-black/30 opacity-0 transition duration-200 group-hover:opacity-100 flex items-center justify-center pointer-events-none">
+                                    <span class="text-white text-xs font-mono tracking-widest bg-black/60 px-3 py-1.5 rounded-sm uppercase backdrop-blur-sm">Click to enlarge</span>
+                                </div> </a>
+                        </div>
+                        <!-- 2. The Full-Screen Native Component Modal -->
+                        <div id="enlarged-[ID-TOKEN]" class="fixed inset-0 z-50 hidden target:flex bg-black/95 backdrop-blur-md items-center justify-center p-2 sm:p-4 md:p-6">
+                            <!-- Tap Anywhere Backing Layer to Close -->
+                            <a href="#" class="absolute inset-0 z-0 cursor-zoom-out" aria-label="Close preview"></a>
+                            <!-- Top-Left Floating Close Action Icon -->
+                            <a href="#" class="absolute top-4 left-4 z-20 text-white/60 hover:text-white p-2 transition-colors bg-black/40 hover:bg-black/80 rounded-sm" aria-label="Close preview"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                                </svg> </a>
+                            <!-- Expanded Display Engine (Pulls from the same CSS variable automatically) -->
+                            <div class="relative z-10 w-full max-w-[95vw] aspect-video bg-ctp-surface0 rounded-sm overflow-hidden shadow-2xl pointer-events-none">
+                                <div class="w-full h-full bg-[image:var(--img)] bg-cover bg-center"></div>
+                            </div>
                         </div>                         
+                        <!--EndOfThumbnail-->                         
                         <div class="flex-1 flex flex-col justify-between">
                             <p class="font-medium font-sans leading-relaxed text-Surface-surface0 text-ctp-text text-lg" data-pgc-field="Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
                             <button type="button" class="bg-Blue-500 cursor-pointer font-bold font-sans hover:bg-Blue-200 mt-6 px-6 py-1 rounded-full self-start shadow-sm text-2xl text-white tracking-wide transition-opacity">
@@ -166,10 +242,29 @@ Hi! I&apos;m Calico. Game Development is very close to my heart. The challenge o
                     <h3 class="font-semibold text-3xl text-Surface-surface0 text-ctp-text tracking-wide" data-pgc-field="Title and Role"><b>Star Wars: Echoes of the Force</b> - Narrative Content Design</h3>
                     <p class="font-semibold mb-4 mt-1 text-2xl text-Surface-surface0 text-ctp-subtext1" data-pgc-field="Date">Fall 2024 - Winter 2025</p>
                     <div class="flex flex-col lg:flex-row gap-6 items-start">
-                        <div class="w-full lg:w-7/12 aspect-video bg-ctp-surface0 rounded-sm overflow-hidden shadow-md shrink-0">
-                            <img alt="Garden of Idan Gameplay" class="block h-full object-cover w-full" src="./Assets/StarWarsMissionDocumentClip.png" data-pgc-field="Thumbnail">
-                            <div class="w-full h-full flex items-center justify-center text-xs font-mono text-ctp-overlay0 uppercase tracking-widest">16:9 Gameplay Image</div>
+                        <!--Thumbnail-->
+                        <!-- 1. The Thumbnail Container -->
+                        <div class="w-full lg:w-7/12 aspect-video bg-ctp-surface0 rounded-sm overflow-hidden shadow-md shrink-0 relative" style="--img: url('./Assets/GardenOfIdanStudy.png');"> 
+                            <!-- 👈 SET YOUR IMAGE PATH HERE ONCE -->
+                            <!-- Anchor is tightly bound to an inline-block; hover actions are completely isolated here -->
+                            <a href="#enlarged-[ID-TOKEN]" class="relative block w-full h-full group cursor-zoom-in"> <!-- Thumbnail Image (Pulls from the parent CSS variable) --> <div class="w-full h-full bg-[image:var(--img)] bg-cover bg-center transition duration-300 group-hover:scale-[1.015]" aria-label="[IMAGE-ALT-TEXT]" src="./Assets/StarWarsMissionDocumentClip.png" data-pgc-field="Thumbnail"></div> <!-- Hover Mask: Only triggers when explicitly hovering over this anchor block --> <div class="absolute inset-0 bg-black/30 opacity-0 transition duration-200 group-hover:opacity-100 flex items-center justify-center pointer-events-none">
+                                    <span class="text-white text-xs font-mono tracking-widest bg-black/60 px-3 py-1.5 rounded-sm uppercase backdrop-blur-sm">Click to enlarge</span>
+                                </div> </a>
+                        </div>
+                        <!-- 2. The Full-Screen Native Component Modal -->
+                        <div id="enlarged-[ID-TOKEN]" class="fixed inset-0 z-50 hidden target:flex bg-black/95 backdrop-blur-md items-center justify-center p-2 sm:p-4 md:p-6">
+                            <!-- Tap Anywhere Backing Layer to Close -->
+                            <a href="#" class="absolute inset-0 z-0 cursor-zoom-out" aria-label="Close preview"></a>
+                            <!-- Top-Left Floating Close Action Icon -->
+                            <a href="#" class="absolute top-4 left-4 z-20 text-white/60 hover:text-white p-2 transition-colors bg-black/40 hover:bg-black/80 rounded-sm" aria-label="Close preview"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                                </svg> </a>
+                            <!-- Expanded Display Engine (Pulls from the same CSS variable automatically) -->
+                            <div class="relative z-10 w-full max-w-[95vw] aspect-video bg-ctp-surface0 rounded-sm overflow-hidden shadow-2xl pointer-events-none">
+                                <div class="w-full h-full bg-[image:var(--img)] bg-cover bg-center"></div>
+                            </div>
                         </div>                         
+                        <!--EndOfThumbnail-->                         
                         <div class="flex-1 flex flex-col justify-between">
                             <p class="font-medium font-sans leading-relaxed text-Surface-surface0 text-ctp-text text-lg" data-pgc-field="Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
                             <button type="button" class="bg-Blue-500 cursor-pointer font-bold font-sans hover:bg-Blue-200 mt-6 px-6 py-1 rounded-full self-start shadow-sm text-2xl text-white tracking-wide transition-opacity">
@@ -190,10 +285,29 @@ Hi! I&apos;m Calico. Game Development is very close to my heart. The challenge o
                     <h3 class="font-semibold text-3xl text-Surface-surface0 text-ctp-text tracking-wide" data-pgc-field="Title and Role"><b>Supercritical</b> - Team Lead and Game Design</h3>
                     <p class="font-semibold mb-4 mt-1 text-2xl text-Surface-surface0 text-ctp-subtext1" data-pgc-field="Date">Fall 2024 - Winter 2025</p>
                     <div class="flex flex-col lg:flex-row gap-6 items-start">
-                        <div class="w-full lg:w-7/12 aspect-video bg-ctp-surface0 rounded-sm overflow-hidden shadow-md shrink-0">
-                            <img alt="Garden of Idan Gameplay" class="block h-full object-cover w-full" src="./Assets/SupercriticalThumbnail.jpg" data-pgc-field="Thumbnail">
-                            <div class="w-full h-full flex items-center justify-center text-xs font-mono text-ctp-overlay0 uppercase tracking-widest">16:9 Gameplay Image</div>
+                        <!--Thumbnail-->
+                        <!-- 1. The Thumbnail Container -->
+                        <div class="w-full lg:w-7/12 aspect-video bg-ctp-surface0 rounded-sm overflow-hidden shadow-md shrink-0 relative" style="--img: url('./Assets/GardenOfIdanStudy.png');"> 
+                            <!-- 👈 SET YOUR IMAGE PATH HERE ONCE -->
+                            <!-- Anchor is tightly bound to an inline-block; hover actions are completely isolated here -->
+                            <a href="#enlarged-[ID-TOKEN]" class="relative block w-full h-full group cursor-zoom-in"> <!-- Thumbnail Image (Pulls from the parent CSS variable) --> <div class="w-full h-full bg-[image:var(--img)] bg-cover bg-center transition duration-300 group-hover:scale-[1.015]" aria-label="[IMAGE-ALT-TEXT]" src="./Assets/SupercriticalThumbnail.jpg" data-pgc-field="Thumbnail"></div> <!-- Hover Mask: Only triggers when explicitly hovering over this anchor block --> <div class="absolute inset-0 bg-black/30 opacity-0 transition duration-200 group-hover:opacity-100 flex items-center justify-center pointer-events-none">
+                                    <span class="text-white text-xs font-mono tracking-widest bg-black/60 px-3 py-1.5 rounded-sm uppercase backdrop-blur-sm">Click to enlarge</span>
+                                </div> </a>
+                        </div>
+                        <!-- 2. The Full-Screen Native Component Modal -->
+                        <div id="enlarged-[ID-TOKEN]" class="fixed inset-0 z-50 hidden target:flex bg-black/95 backdrop-blur-md items-center justify-center p-2 sm:p-4 md:p-6">
+                            <!-- Tap Anywhere Backing Layer to Close -->
+                            <a href="#" class="absolute inset-0 z-0 cursor-zoom-out" aria-label="Close preview"></a>
+                            <!-- Top-Left Floating Close Action Icon -->
+                            <a href="#" class="absolute top-4 left-4 z-20 text-white/60 hover:text-white p-2 transition-colors bg-black/40 hover:bg-black/80 rounded-sm" aria-label="Close preview"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                                </svg> </a>
+                            <!-- Expanded Display Engine (Pulls from the same CSS variable automatically) -->
+                            <div class="relative z-10 w-full max-w-[95vw] aspect-video bg-ctp-surface0 rounded-sm overflow-hidden shadow-2xl pointer-events-none">
+                                <div class="w-full h-full bg-[image:var(--img)] bg-cover bg-center"></div>
+                            </div>
                         </div>                         
+                        <!--EndOfThumbnail-->                         
                         <div class="flex-1 flex flex-col justify-between">
                             <p class="font-medium font-sans leading-relaxed text-Surface-surface0 text-ctp-text text-lg" data-pgc-field="Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
                             <button type="button" class="bg-Blue-500 cursor-pointer font-bold font-sans hover:bg-Blue-200 mt-6 px-6 py-1 rounded-full self-start shadow-sm text-2xl text-white tracking-wide transition-opacity">
@@ -204,12 +318,12 @@ Hi! I&apos;m Calico. Game Development is very close to my heart. The challenge o
                 </div>
             </div>
         </div>
-        <footer class="bg-Blue-500 pb-20 transition-all" id="Footer">
+        <footer class="bg-Blue-500 pb-20" id="Footer">
             <div class="container flex flex-col font-semibold items-center justify-center mx-auto px-4 text-white">
                 <strong class="font-bold py-5 text-4xl text-center text-white">- Contact -</strong>
             </div>
             <div class="container font-semibold mx-auto px-4"> 
-                <div class="flex flex-col flex-wrap items-center mx-0 text-2xl xl:flex-row xl:mx-60"> 
+                <div class="flex flex-wrap mx-80 text-2xl"> 
                     <div class="text-white w-full md:w-1/2">
                         <div class="flex items-center justify-center">
                             <svg viewBox="0 0 24 24" fill="currentColor" class="h-10 transition-all w-10 sm:size-10 md:size-7" width="24" height="24"> 

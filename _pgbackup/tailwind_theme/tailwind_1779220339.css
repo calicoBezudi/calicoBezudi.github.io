@@ -1566,16 +1566,6 @@
       order: 1;
     }
   }
-  .xl\:mx-60 {
-    @media (width >= 80rem) {
-      margin-inline: calc(var(--spacing) * 60);
-    }
-  }
-  .xl\:mx-80 {
-    @media (width >= 80rem) {
-      margin-inline: calc(var(--spacing) * 80);
-    }
-  }
   .xl\:max-w-6\/12 {
     @media (width >= 80rem) {
       max-width: calc(6 / 12 * 100%);

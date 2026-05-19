@@ -806,9 +806,6 @@
   .-mx-4 {
     margin-inline: calc(var(--spacing) * -4);
   }
-  .mx-0 {
-    margin-inline: calc(var(--spacing) * 0);
-  }
   .mx-80 {
     margin-inline: calc(var(--spacing) * 80);
   }
@@ -923,9 +920,6 @@
   }
   .flex-col {
     flex-direction: column;
-  }
-  .flex-row {
-    flex-direction: row;
   }
   .flex-wrap {
     flex-wrap: wrap;
@@ -1044,9 +1038,6 @@
   }
   .bg-repeat {
     background-repeat: repeat;
-  }
-  .object-cover {
-    object-fit: cover;
   }
   .object-scale-down {
     object-fit: scale-down;
@@ -1390,11 +1381,6 @@
       }
     }
   }
-  .md\:mx-80 {
-    @media (width >= 48rem) {
-      margin-inline: calc(var(--spacing) * 80);
-    }
-  }
   .md\:mx-auto {
     @media (width >= 48rem) {
       margin-inline: auto;
@@ -1446,11 +1432,6 @@
       max-width: calc(8 / 12 * 100%);
     }
   }
-  .md\:flex-row {
-    @media (width >= 48rem) {
-      flex-direction: row;
-    }
-  }
   .md\:justify-start {
     @media (width >= 48rem) {
       justify-content: flex-start;
@@ -1490,11 +1471,6 @@
   .lg\:-order-1 {
     @media (width >= 64rem) {
       order: calc(1 * -1);
-    }
-  }
-  .lg\:mx-80 {
-    @media (width >= 64rem) {
-      margin-inline: calc(var(--spacing) * 80);
     }
   }
   .lg\:flex {
@@ -1564,16 +1540,6 @@
   .xl\:order-1 {
     @media (width >= 80rem) {
       order: 1;
-    }
-  }
-  .xl\:mx-60 {
-    @media (width >= 80rem) {
-      margin-inline: calc(var(--spacing) * 60);
-    }
-  }
-  .xl\:mx-80 {
-    @media (width >= 80rem) {
-      margin-inline: calc(var(--spacing) * 80);
     }
   }
   .xl\:max-w-6\/12 {
