@@ -815,15 +815,6 @@
   .mx-auto {
     margin-inline: auto;
   }
-  .my-1 {
-    margin-block: calc(var(--spacing) * 1);
-  }
-  .my-1\.5 {
-    margin-block: calc(var(--spacing) * 1.5);
-  }
-  .my-2 {
-    margin-block: calc(var(--spacing) * 2);
-  }
   .-mt-0\.5 {
     margin-top: calc(var(--spacing) * -0.5);
   }
@@ -1087,9 +1078,6 @@
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
-  .py-2\.5 {
-    padding-block: calc(var(--spacing) * 2.5);
-  }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
@@ -1101,9 +1089,6 @@
   }
   .pt-2\.5 {
     padding-top: calc(var(--spacing) * 2.5);
-  }
-  .pt-5 {
-    padding-top: calc(var(--spacing) * 5);
   }
   .pb-5 {
     padding-bottom: calc(var(--spacing) * 5);

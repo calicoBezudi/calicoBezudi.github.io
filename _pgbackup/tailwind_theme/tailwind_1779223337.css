@@ -1087,9 +1087,6 @@
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
-  .py-2\.5 {
-    padding-block: calc(var(--spacing) * 2.5);
-  }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
@@ -1101,9 +1098,6 @@
   }
   .pt-2\.5 {
     padding-top: calc(var(--spacing) * 2.5);
-  }
-  .pt-5 {
-    padding-top: calc(var(--spacing) * 5);
   }
   .pb-5 {
     padding-bottom: calc(var(--spacing) * 5);
