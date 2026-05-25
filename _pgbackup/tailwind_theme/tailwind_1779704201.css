@@ -797,9 +797,6 @@
   .my-1\.5 {
     margin-block: calc(var(--spacing) * 1.5);
   }
-  .my-5 {
-    margin-block: calc(var(--spacing) * 5);
-  }
   .-mt-0\.5 {
     margin-top: calc(var(--spacing) * -0.5);
   }
@@ -974,9 +971,6 @@
   }
   .self-start {
     align-self: flex-start;
-  }
-  .justify-self-center {
-    justify-self: center;
   }
   .overflow-hidden {
     overflow: hidden;

@@ -797,9 +797,6 @@
   .my-1\.5 {
     margin-block: calc(var(--spacing) * 1.5);
   }
-  .my-5 {
-    margin-block: calc(var(--spacing) * 5);
-  }
   .-mt-0\.5 {
     margin-top: calc(var(--spacing) * -0.5);
   }
@@ -878,12 +875,6 @@
   }
   .w-full {
     width: 100%;
-  }
-  .max-w-4\/12 {
-    max-width: calc(4 / 12 * 100%);
-  }
-  .max-w-5\/12 {
-    max-width: calc(5 / 12 * 100%);
   }
   .max-w-10\/12 {
     max-width: calc(10 / 12 * 100%);
@@ -969,14 +960,8 @@
       margin-inline-end: calc(calc(var(--spacing) * 1) * calc(1 - var(--tw-space-x-reverse)));
     }
   }
-  .self-center {
-    align-self: center;
-  }
   .self-start {
     align-self: flex-start;
-  }
-  .justify-self-center {
-    justify-self: center;
   }
   .overflow-hidden {
     overflow: hidden;
