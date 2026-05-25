@@ -18,7 +18,7 @@
                     </div>                     
                     <div class="lg:flex lg:space-x-4 lg:space-y-0 lg:w-auto space-y-2 w-full hidden lg:items-center" data-name="nav-menu"> 
                         <div class="flex flex-col lg:flex-row"> <a href="index.html#AboutMe" class="font-bold font-sans px-0 py-2 text-Surface-surface0 uppercase hover:text-Blue-700 lg:px-4">About</a> <a href="index.html#Projects" class="font-bold font-sans px-0 py-2 text-Surface-surface0 uppercase hover:text-Blue-700 lg:px-4">Projects</a> <a href="Assets/Calico Bezuidenhout - Systems Design Resume.pdf" class="font-bold font-sans px-0 py-2 text-Surface-surface0 uppercase hover:text-Blue-700 lg:px-4" target="_blank">Resume</a> <a href="index.html#Footer" class="font-bold font-sans px-0 py-2 text-Surface-surface0 uppercase hover:text-Blue-700 lg:px-4">Contact</a>
-                            <a href="pages/Blog.html" class="font-bold font-sans px-0 py-2 text-Surface-surface0 uppercase hover:text-Blue-700 lg:px-4">Blog</a> 
+                            <a href="blog/index.html" class="font-bold font-sans px-0 py-2 text-Surface-surface0 uppercase hover:text-Blue-700 lg:px-4">Blog</a> 
                         </div>                         
                     </div>                     
                 </nav>                 
@@ -71,14 +71,13 @@ Hi! I&apos;m Calico. Game Development is very close to my heart. The challenge o
                 January 2026 - May 2026 </p>
                     <div class="flex flex-col lg:flex-row gap-6 items-start">
                         <div class="w-full lg:w-7/12 aspect-video bg-ctp-surface0 rounded-sm overflow-hidden shadow-md shrink-0">
-                            <img alt="Garden of Idan Gameplay" class="block h-full object-cover w-full" src="./Assets/GardenOfIdanStudy.png" data-pgc-edit="Thumbnail[src, no_content]">
+                            <img alt="Garden of Idan Gameplay" class="block h-full object-cover w-full" src="portfolio/GardenOfIdan/assets/GardenOfIdanStudy.png" data-pgc-edit="Thumbnail[src, no_content]">
                             <div class="w-full h-full flex items-center justify-center text-xs font-mono text-ctp-overlay0 uppercase tracking-widest">16:9 Gameplay Image</div>
                         </div>                         
                         <div class="flex-1 flex flex-col justify-between" data-pgc-edit="Content">
                             <p class="font-medium font-sans leading-relaxed text-Surface-surface0 text-ctp-text text-lg" data-pgc-edit="Description">As the System Design lead for Garden of Idan, I architected and built all core gameplay systems; including the isometric camera movement and occlusion systems. I designed the project file structure, managed and maintain the Perforce workspace, and taught others on the team how to navigate the technical side of the project while creating tools and versatile, modular systems that could be used by Gameplay Designers without ever opening or touching a Blueprint Graph.</p>
-                            <button type="button" class="bg-Blue-500 block cursor-pointer font-bold font-sans mt-6 px-6 py-1 rounded-full self-start shadow-sm text-2xl text-white tracking-wide transition-opacity hover:bg-Blue-200" data-pgc-edit="See More Button[class]">
-                                See More &gt;
-</button>
+                            <a type="button" class="bg-Blue-500 block cursor-pointer font-bold font-sans mt-6 px-6 py-1 rounded-full self-start shadow-sm text-2xl text-white tracking-wide transition-opacity hover:bg-Blue-200" data-pgc-edit="See More Button[class, href]" target="_blank" href="https://www.google.com">
+                                See More &gt;</a>
                         </div>
                     </div>
                 </div>
@@ -100,8 +99,9 @@ Hi! I&apos;m Calico. Game Development is very close to my heart. The challenge o
                         </div>                         
                         <div class="flex-1 flex flex-col justify-between" data-pgc-field="Content">
                             <p class="font-medium font-sans leading-relaxed text-Surface-surface0 text-ctp-text text-lg" data-pgc-field="Description">Over 48 hours, I worked with other designers on the Systems of Massaquerade from start to finish for Global Game Jam 2026 with the theme of &quot;Masks.&quot; I taught people how to use Perforce who had never used it before, and solved technical problems and roadblocks as they arose for other members of the team.</p>
-                            <button type="button" class="bg-Blue-500 block cursor-pointer font-bold font-sans mt-6 px-6 py-1 rounded-full self-start shadow-sm text-2xl text-white tracking-wide transition-opacity hover:bg-Blue-200" data-pgc-field="See More Button">Itch.io &gt;</button>
-                            <button type="button" class="bg-Blue-500 block cursor-pointer font-bold font-sans mt-6 px-6 py-1 rounded-full self-start shadow-sm text-2xl text-white tracking-wide transition-opacity hover:bg-Blue-200" data-pgc-field="See More Button">Jam Site &gt;</button>
+                            <button type="button" class="bg-Blue-500 block cursor-pointer font-bold font-sans hidden mt-6 px-6 py-1 rounded-full self-start shadow-sm text-2xl text-white tracking-wide transition-opacity hover:bg-Blue-200" data-pgc-field="See More Button" href>Itch.io &gt;</button>
+                            <a type="button" class="bg-Blue-500 block cursor-pointer font-bold font-sans mt-6 px-6 py-1 rounded-full self-start shadow-sm text-2xl text-white tracking-wide transition-opacity hover:bg-Blue-200" href="https://ladybyteplus.itch.io/massaquerade" target="_blank">itch.io &gt;</a>
+                            <a type="button" class="bg-Blue-500 block cursor-pointer font-bold font-sans mt-6 px-6 py-1 rounded-full self-start shadow-sm text-2xl text-white tracking-wide transition-opacity hover:bg-Blue-200" href="https://globalgamejam.org/games/2026/massaquerade-4" target="_blank">Jam Site &gt;</a>
                         </div>
                     </div>
                 </div>
@@ -123,7 +123,9 @@ Hi! I&apos;m Calico. Game Development is very close to my heart. The challenge o
                         </div>                         
                         <div class="flex-1 flex flex-col justify-between" data-pgc-field="Content">
                             <p class="font-medium font-sans leading-relaxed text-Surface-surface0 text-ctp-text text-lg" data-pgc-field="Description">Through the course of 10 weeks, I created the gameplay prototype for Cold Fusion, a 3D shoot-&apos;em-up inside of Unreal Engine. I implemented complex systems such as dynamic Object Pooling, and constructed my systems in a way that a gameplay designer could easily use them, anticipating further development of the project in a team environment and to allow for rapid development of levels in the future.&nbsp;</p>
-                            <button type="button" class="bg-Blue-500 block cursor-pointer font-bold font-sans mt-6 px-6 py-1 rounded-full self-start shadow-sm text-2xl text-white tracking-wide transition-opacity hover:bg-Blue-200" data-pgc-field="See More Button">See More &gt;</button>
+                            <button type="button" class="bg-Blue-500 block cursor-pointer font-bold font-sans hidden mt-6 px-6 py-1 rounded-full self-start shadow-sm text-2xl text-white tracking-wide transition-opacity hover:bg-Blue-200" data-pgc-field="See More Button" href="https://sites.google.com/view/calicobezuidenhout-game-405-01/home">Process Book
+    &gt;</button>
+                            <a type="button" class="bg-Blue-500 block cursor-pointer font-bold font-sans mt-6 px-6 py-1 rounded-full self-start shadow-xs text-2xl text-white tracking-wide transition-opacity hover:bg-Blue-200" href="https://sites.google.com/view/calicobezuidenhout-game-405-01/home" target="_blank">Process Book &gt;</a>
                         </div>
                     </div>
                 </div>
@@ -140,7 +142,7 @@ Hi! I&apos;m Calico. Game Development is very close to my heart. The challenge o
                     <p class="font-semibold mb-4 mt-1 text-2xl text-Surface-surface0 text-ctp-subtext1" data-pgc-field="Date">Fall 2024 - Winter 2025</p>
                     <div class="flex flex-col lg:flex-row gap-6 items-start">
                         <div class="w-full lg:w-7/12 aspect-video bg-ctp-surface0 rounded-sm overflow-hidden shadow-md shrink-0">
-                            <img alt="Garden of Idan Gameplay" class="block h-full object-cover w-full" src="./Assets/OvergrownHeader_WithLogo.png" data-pgc-field="Thumbnail">
+                            <img alt="Garden of Idan Gameplay" class="block h-full object-cover w-full" src="portfolio/Overgrown/assets/OvergrownHeader_WithLogo.png" data-pgc-field="Thumbnail">
                             <div class="w-full h-full flex items-center justify-center text-xs font-mono text-ctp-overlay0 uppercase tracking-widest">16:9 Gameplay Image</div>
                         </div>                         
                         <div class="flex-1 flex flex-col justify-between" data-pgc-field="Content">
@@ -186,12 +188,12 @@ Hi! I&apos;m Calico. Game Development is very close to my heart. The challenge o
                     <p class="font-semibold mb-4 mt-1 text-2xl text-Surface-surface0 text-ctp-subtext1" data-pgc-field="Date">Fall 2024 - Winter 2025</p>
                     <div class="flex flex-col lg:flex-row gap-6 items-start">
                         <div class="w-full lg:w-7/12 aspect-video bg-ctp-surface0 rounded-sm overflow-hidden shadow-md shrink-0">
-                            <img alt="Garden of Idan Gameplay" class="block h-full object-cover w-full" src="./Assets/SupercriticalThumbnail.jpg" data-pgc-field="Thumbnail">
+                            <img alt="Garden of Idan Gameplay" class="block h-full object-cover w-full" src="portfolio/Supercritical/assets/SupercriticalThumbnail.jpg" data-pgc-field="Thumbnail">
                             <div class="w-full h-full flex items-center justify-center text-xs font-mono text-ctp-overlay0 uppercase tracking-widest">16:9 Gameplay Image</div>
                         </div>                         
                         <div class="flex-1 flex flex-col justify-between" data-pgc-field="Content">
                             <p class="font-medium font-sans leading-relaxed text-Surface-surface0 text-ctp-text text-lg" data-pgc-field="Description">Supercritical is one of my earliest works, which I developed along with a team of four other designers. We had six weeks to prototype, develop, and produce a physical copy of a four player cooperative board game that would play for up to 60 minutes. I acted as team lead, managing the asset list, task distribution, and scope decisions. I was also in charge of creating the core gameplay and narrative. Challenges included time management for the creation of assets, frequent playtesting within the class, and physically producing the game pieces; including printing locally, cutting, assembling ourselves.&nbsp;</p>
-                            <button type="button" class="bg-Blue-500 block cursor-pointer font-bold font-sans mt-6 px-6 py-1 rounded-full self-start shadow-sm text-2xl text-white tracking-wide transition-opacity hover:bg-Blue-200" data-pgc-field="See More Button">See More &gt;</button>
+                            <button type="button" class="bg-Blue-500 block cursor-pointer font-bold font-sans mt-6 px-6 py-1 rounded-full self-start shadow-sm text-2xl text-white tracking-wide transition-opacity hover:bg-Blue-200" data-pgc-field="See More Button" href="portfolio/Supercritical/index.html">See More &gt;</button>
                         </div>
                     </div>
                 </div>
