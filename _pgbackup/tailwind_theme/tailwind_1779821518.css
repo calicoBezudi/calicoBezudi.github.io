@@ -883,6 +883,9 @@
   .max-h-8\/12 {
     max-height: calc(8 / 12 * 100%);
   }
+  .w-1\/2 {
+    width: calc(1 / 2 * 100%);
+  }
   .w-6 {
     width: calc(var(--spacing) * 6);
   }
@@ -903,6 +906,9 @@
   }
   .max-w-5\/12 {
     max-width: calc(5 / 12 * 100%);
+  }
+  .max-w-6\/12 {
+    max-width: calc(6 / 12 * 100%);
   }
   .max-w-9\/12 {
     max-width: calc(9 / 12 * 100%);
@@ -966,6 +972,9 @@
   }
   .justify-center {
     justify-content: center;
+  }
+  .justify-items-center {
+    justify-items: center;
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
