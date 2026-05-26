@@ -46,10 +46,10 @@
                     <div class="indent-5 py-5 mx-auto Dimension: Max Width: 9/12 max-w-9/12">Being an isometric puzzle game was part of Garden of Idans original design and pitch from the start. The camera system would be its key player, and puzzles would be built around it so nailing it very adamantly and from the start would be important. Keeping it modular and easy to use would also be key, and so we have to start with defining all they key traits of our camera. Sketches like the one above are important in defining things that people may take for granted or believe everyone is on the same page on, but may actually be miscommunicating or leaving undefined. Whether or not the camera is centered on the player or the room being an important one, what the space around a room looks like, and so on.</div>
                     <div class="flex flex-wrap mx-auto place-content-evenly"> 
                         <div class="w-full md:w-3/7">
-                            <img src="assets/definitelynotIsometric.png">
+                            <img src="assets/definitelynotIsometric.png" class="max-w-6/12">
                         </div>                         
                         <div class="w-full md:w-3/7">
-                            <img src="assets/actuallyIsometric.png">
+                            <img src="assets/actuallyIsometric.png" class="max-w-6/12">
                         </div>                         
                     </div>
                     <div class="flex flex-wrap mx-auto place-content-evenly"> 
@@ -249,37 +249,25 @@
                             <video src="assets/Screencast_20260213_164004.webm" muted="true" controls class="justify-self-center mx-auto">Your browser doesn't support HTML5 video tag.</video>                             
                         </div>                         
                         <div class="w-full md:w-1/2">
-                            <video src="assets/Screencast_20260213_172824.webm" muted="true" controls class="justify-self-center mx-auto">Your browser doesn't support HTML5 video tag.</video>                             
+                            <video src="assets/Screencast_20260213_172824.webm" muted="true" controls="" class="justify-self-center mx-auto">Your browser doesn&apos;t support HTML5 video tag.</video>                             
                         </div>                         
                     </div>
-                    <div class="indent-5 py-5 mx-auto Dimension: Max Width: 9/12 max-w-9/12">Using further math on the graph and passing along the rotation of the camera and the size of the room, we can get&nbsp;</div>
+                    <div class="indent-5 py-5 mx-auto Dimension: Max Width: 9/12 max-w-9/12">Using further math on the graph and passing along the rotation of the camera and the size of the room set on the individual anchor, we can not only get a mask that covers all the actors along the corner facing the camera, but also that fits perfectly within the corner of any size room in order to get that perfect two wall occlusion effect.</div>
                     <img src="assets/Screenshot_20260526_074107.png" class="justify-self-center max-w-10/12 mx-auto self-center lg:max-w-10/12 xl:max-w-8/12">
-                    <div class="indent-5 py-5 mx-auto Dimension: Max Width: 9/12 max-w-9/12">Material graph stuff, how we use the material function on our master materials (Can show more blueprints)</div>
+                    <div class="indent-5 py-5 mx-auto Dimension: Max Width: 9/12 max-w-9/12">Here is a glimpse at the part of the material function used for handling the worldspace occlusion. We use a material function since its the only sensible way to maintain the occlusion effect across multiple master materials and specialist materials that may still need to occlude. We also use a dithered mask instead of a translucent material to better fit our visual target as well as performance.&nbsp;</div>
                     <video src="assets/Screencast_20260213_191055.webm" muted="true" controls class="max-w-10/12 mx-auto lg:max-w-10/12 xl:max-w-8/12">Your browser doesn't support HTML5 video tag.</video>
-                    <div class="9/12 Max indent-5 max-w-9/12 mx-auto py-5 Dimension: Width:">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Curabitur ac sagittis neque, vel egestas est. Aenean elementum, erat at aliquet hendrerit, elit nisl posuere tortor, id suscipit diam dui sed nisi. Morbi sollicitudin massa vel tortor consequat, eget semper nisl fringilla. Maecenas at hendrerit odio. Sed in mi eu quam suscipit bibendum quis at orci. Pellentesque fermentum nisl purus, et iaculis lectus pharetra sit amet.</div>
+                    <div class="9/12 Max indent-5 max-w-9/12 mx-auto py-5 Dimension: Width:">Here is a demonstration of the functioning occlusion effect. You can see now that we still have yet to occlude actors that move infront of the player ,such as the bookshelf and the stairs. We do this in the other half of the material function below.</div>
                     <div class="flex flex-wrap mx-auto"> 
-                        <div class="md:w-1/2 w-full">
-                            <img src="assets/Screenshot_20260526_074159-1.png"> 
-                        </div>                         
-                        <div class="w-full md:w-1/2">
-                            <video src="assets/Screencast_20260213_200845.webm" muted="true" controls class="mx-auto">Your browser doesn't support HTML5 video tag.</video>                             
-                        </div>                         
+                        <img src="assets/Screenshot_20260526_074159-1.png" class="mx-auto">
+                        <video src="assets/Screencast_20260213_200845.webm" muted="true" controls class="mx-auto">Your browser doesn't support HTML5 video tag.</video>                         
                     </div>
-                    <div class="9/12 Max indent-5 max-w-9/12 mx-auto py-5 Dimension Width">Explain the player aura occlusion challenge and how we handle it (Screen space).</div>
-                    <div class="flex flex-wrap mx-auto"> 
-                        <div class="md:w-1/2 w-full">
-                            <img src="assets/image2.png"> 
-                        </div>                         
-                        <div class="w-full md:w-1/2">
-                            <img src="assets/image.png"> 
-                        </div>                         
-                    </div>
-                    <div class="9/12 Max indent-5 max-w-9/12 mx-auto py-5 Dimension Width">Show off blueprint function library, how it can be used, how its used in the various different puzzles.</div>
-                    <div class="9/12 Max indent-5 max-w-9/12 mx-auto py-5 Dimension Width">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Curabitur ac sagittis neque, vel egestas est. Aenean elementum, erat at aliquet hendrerit, elit nisl posuere tortor, id suscipit diam dui sed nisi. Morbi sollicitudin massa vel tortor consequat, eget semper nisl fringilla. Maecenas at hendrerit odio. Sed in mi eu quam suscipit bibendum quis at orci. Pellentesque fermentum nisl purus, et iaculis lectus pharetra sit amet.</div>
+                    <div class="9/12 Max indent-5 max-w-9/12 mx-auto py-5 Dimension Width">Because we don&apos;t have a way to cast a line masking or applying a material mask to the actors between the player and the camera, instead I pass the screenspace location of the player capsule into the material parameter collection, and reconstruct a mask of all the actors on that part of the sceen that is also infront of the player&apos;s location in worldspace.</div>
+                    <img src="assets/Screenshot_20260526_125633.png" class="justify-self-center max-w-10/12 mx-auto self-center lg:max-w-10/12 xl:max-w-8/12">
+                    <div class="9/12 Max indent-5 max-w-9/12 mx-auto py-5 Dimension Width">And of course, none of these systems would be useful if they werent easy to access, configure, and use for myself and anyone else who wished to create systems. While we have a lot of internal interfaces, I also created a blueprint function library for the various parts of the system most frequently accessed by other blueprints and puzzle pieces, such as manually setting the camera rotation from anywhere, rotating the camera a set number of degrees from anywhere, updating the camera occlusion parameters from anywhere, and register an actor and reading the actors who &quot;capture,&quot; listen to, and prevent the player from rotating the camera.</div>
                     <video src="assets/Screencast_20260504_124957.webm" muted="true" controls class="max-w-10/12 mx-auto lg:max-w-10/12 xl:max-w-8/12">Your browser doesn't support HTML5 video tag.</video>
-                    <div class="9/12 Max indent-5 max-w-9/12 mx-auto py-5 Dimension Width">Show setting up the camera system</div>
+                    <div class="9/12 Max indent-5 max-w-9/12 mx-auto py-5 Dimension Width">For gameplay designers, this is how fast it is to create a new room and setup a camera volume and actor. This allows for rapid iteration, and we can also adjust values like the ortho width (aka zoom) of camera for each anchor. On larger rooms, there is a system that uses a shared center anchor for determining the two-wall occlusion, while allowing the anchor to move to different points throughout for larger spaces like the library.</div>
                     <video src="../../portfolio/GardenOfIdan/assets/MidtermAsset_Calico_1.mp4" muted="true" controls class="max-w-10/12 mx-auto lg:max-w-10/12 xl:max-w-8/12">Your browser doesn't support HTML5 video tag.</video>
-                    <div class="9/12 Max indent-5 max-w-9/12 mx-auto py-5 Dimension Width">Final gameplay effect</div>                     
+                    <div class="9/12 Max indent-5 max-w-9/12 mx-auto py-5 Dimension Width">And here is a final demonstration of the foyer, the illusion, and the occlusion in gameplay.</div>                     
                 </section>                 
             </main>             
         </div>         
