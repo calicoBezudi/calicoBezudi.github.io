@@ -889,6 +889,9 @@
   .max-w-5\/12 {
     max-width: calc(5 / 12 * 100%);
   }
+  .max-w-6\/12 {
+    max-width: calc(6 / 12 * 100%);
+  }
   .max-w-9\/12 {
     max-width: calc(9 / 12 * 100%);
   }
@@ -903,6 +906,9 @@
   }
   .shrink-0 {
     flex-shrink: 0;
+  }
+  .origin-center {
+    transform-origin: center;
   }
   .rotate-0 {
     rotate: 0deg;
@@ -942,6 +948,9 @@
   }
   .justify-center {
     justify-content: center;
+  }
+  .justify-items-center {
+    justify-items: center;
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
@@ -1185,6 +1194,15 @@
   }
   .text-white {
     color: var(--color-white);
+  }
+  .capitalize {
+    text-transform: capitalize;
+  }
+  .lowercase {
+    text-transform: lowercase;
+  }
+  .normal-case {
+    text-transform: none;
   }
   .uppercase {
     text-transform: uppercase;
